@@ -227,6 +227,7 @@ DefBinaryOp(ElementwiseProductWithLinearRectifierDerivativeFromOutput, b > 0 ? a
 DefBinaryOp(ElementwiseProductWithLogDerivativeFromOutput, a* exp_(-b));
 DefBinaryOp(ElementwiseProductWithCosDerivative, a * -sin_(b)); // note: b = input for cos()
 //DefBinaryOp(Index, IndexElement(a, b, i));  // note: this one uses the third argument
+DefBinaryOp(ElementwiseProductWithAbsDerivative, a * (b / fabs_(b)));	// note: b = input for abs()
 
 #pragma pop_macro("DefBinaryOp")
 
